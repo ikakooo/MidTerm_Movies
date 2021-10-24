@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PopularCollectionViewCell" customModule="MidTerm_Movies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_kotlin" translatesAutoresizingMaskIntoConstraints="NO" id="fbp-1I-tQe">
+                        <rect key="frame" x="0.0" y="0.0" width="140" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="EHL-RS-jrh"/>
+                            <constraint firstAttribute="width" constant="140" id="ams-0R-ooj"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thunder force" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EL6-Yr-Pkv">
+                        <rect key="frame" x="0.0" y="108" width="140" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fbp-1I-tQe" secondAttribute="trailing" id="2Og-yW-aP2"/>
+                <constraint firstAttribute="trailing" secondItem="fbp-1I-tQe" secondAttribute="trailing" id="3wv-In-kjB"/>
+                <constraint firstItem="EL6-Yr-Pkv" firstAttribute="top" secondItem="fbp-1I-tQe" secondAttribute="bottom" constant="8" id="67t-ox-c3t"/>
+                <constraint firstItem="fbp-1I-tQe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="F5T-Jj-fBY"/>
+                <constraint firstAttribute="bottom" secondItem="EL6-Yr-Pkv" secondAttribute="bottom" constant="8" id="Ki2-35-TMu"/>
+                <constraint firstItem="fbp-1I-tQe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bZi-oE-Itr"/>
+                <constraint firstItem="EL6-Yr-Pkv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hsh-Ym-cif"/>
+                <constraint firstAttribute="trailing" secondItem="EL6-Yr-Pkv" secondAttribute="trailing" id="r2s-nj-Po0"/>
+                <constraint firstItem="fbp-1I-tQe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uRi-dg-J8y"/>
+                <constraint firstItem="fbp-1I-tQe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zTE-ng-8m7"/>
+            </constraints>
+            <size key="customSize" width="140" height="140"/>
+            <connections>
+                <outlet property="movieIMG" destination="fbp-1I-tQe" id="UWK-Mi-TUn"/>
+                <outlet property="movieName" destination="EL6-Yr-Pkv" id="EYl-Di-z1h"/>
+            </connections>
+            <point key="canvasLocation" x="202.89855072463769" y="174.77678571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="logo_kotlin" width="225" height="225"/>
+    </resources>
+</document>
