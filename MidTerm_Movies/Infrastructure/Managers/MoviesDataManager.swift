@@ -41,4 +41,17 @@ class MoviesDataManager {
             }
         }
     }
+    
+    func MultiMediaSearchBy(Name:String,completion: @escaping ((MultiMediaModel) -> Void)) {
+        let queries = ["api_key": MovieConstants.API_KEY,"query":"\(Name)"]
+        
+        networkManager.get(url: MovieConstants.BASE_URL_MOVIES, path: MovieConstants.multiSearchPath , queryParams: queries) { (result: Result<MultiMediaModel, Error>) in
+            switch result {
+            case .success(let apiResponse):
+                completion(apiResponse)
+            case .failure(let error):
+                print("\(error) ikakooooooooo")
+            }
+        }
+    }
 }

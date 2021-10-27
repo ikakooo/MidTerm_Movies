@@ -20,6 +20,7 @@
                     <connections>
                         <segue destination="cMB-ld-b0y" kind="relationship" relationship="viewControllers" id="h0a-Hh-4KP"/>
                         <segue destination="JBD-1i-CkJ" kind="relationship" relationship="viewControllers" id="p72-Nh-O59"/>
+                        <segue destination="OKT-QQ-6pQ" kind="relationship" relationship="viewControllers" id="DhS-6i-GD6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BA3-Cw-LeY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -36,6 +37,18 @@
             </objects>
             <point key="canvasLocation" x="1760" y="38"/>
         </scene>
+        <!--ProfileTabViewController-->
+        <scene sceneID="Qay-ks-kES">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ProfileTabViewController" storyboardName="ProfileTabViewController" referencedIdentifier="ProfileTabViewController" id="OKT-QQ-6pQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" landscapeImage="person" largeContentSizeImage="person" id="Dbi-JQ-JXf">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f51-Xz-e2S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1744" y="185"/>
+        </scene>
         <!--HomeTabViewController-->
         <scene sceneID="xGb-p7-aNb">
             <objects>
@@ -50,6 +63,7 @@
     <resources>
         <image name="ic_home" width="20" height="22"/>
         <image name="ic_search" width="23" height="22"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

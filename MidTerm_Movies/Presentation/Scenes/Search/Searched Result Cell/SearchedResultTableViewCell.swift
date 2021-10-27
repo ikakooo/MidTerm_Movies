@@ -25,7 +25,7 @@ class SearchedResultTableViewCell: UITableViewCell {
     }
     
     
-    func configure(with: Movie){
+    func configure(with: Media){
         
         
         print("iakaooooo")

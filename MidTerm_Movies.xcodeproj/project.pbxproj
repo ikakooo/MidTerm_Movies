@@ -31,6 +31,9 @@
 		3B6DBAA72725697F0034EEF8 /* SearchedResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DBAA52725697F0034EEF8 /* SearchedResultTableViewCell.xib */; };
 		3B6DBAAB2725F1F00034EEF8 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6DBAA92725F1F00034EEF8 /* PopularCollectionViewCell.swift */; };
 		3B6DBAAC2725F1F00034EEF8 /* PopularCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DBAAA2725F1F00034EEF8 /* PopularCollectionViewCell.xib */; };
+		3B8047DD2728584500BF9956 /* ProfileTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8047DC2728584500BF9956 /* ProfileTabViewController.swift */; };
+		3B8047DF2728585500BF9956 /* ProfileTabViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8047DE2728585500BF9956 /* ProfileTabViewController.storyboard */; };
+		3B8047E1272873B500BF9956 /* MultiMediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8047E0272873B500BF9956 /* MultiMediaModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		3B6DBAA52725697F0034EEF8 /* SearchedResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchedResultTableViewCell.xib; sourceTree = "<group>"; };
 		3B6DBAA92725F1F00034EEF8 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B6DBAAA2725F1F00034EEF8 /* PopularCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCollectionViewCell.xib; sourceTree = "<group>"; };
+		3B8047DC2728584500BF9956 /* ProfileTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabViewController.swift; sourceTree = "<group>"; };
+		3B8047DE2728585500BF9956 /* ProfileTabViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTabViewController.storyboard; sourceTree = "<group>"; };
+		3B8047E0272873B500BF9956 /* MultiMediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMediaModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +209,7 @@
 		3B6DBA7B272546F50034EEF8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3B8047DB272857FB00BF9956 /* Profile */,
 				3B6DBA8A27254E830034EEF8 /* Search */,
 				3B6DBA8527254BDC0034EEF8 /* Home */,
 				3B6DBA7E272547C60034EEF8 /* Main Tab Bar */,
@@ -277,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				3B6DBA96272550450034EEF8 /* MovieDataModel.swift */,
+				3B8047E0272873B500BF9956 /* MultiMediaModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -297,6 +305,15 @@
 				3B6DBAAA2725F1F00034EEF8 /* PopularCollectionViewCell.xib */,
 			);
 			path = "Popular Cell";
+			sourceTree = "<group>";
+		};
+		3B8047DB272857FB00BF9956 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3B8047DC2728584500BF9956 /* ProfileTabViewController.swift */,
+				3B8047DE2728585500BF9956 /* ProfileTabViewController.storyboard */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B6DBA8E27254EF50034EEF8 /* SearchTabViewController.storyboard in Resources */,
+				3B8047DF2728585500BF9956 /* ProfileTabViewController.storyboard in Resources */,
 				3B6DBAAC2725F1F00034EEF8 /* PopularCollectionViewCell.xib in Resources */,
 				3B6DBA8927254C830034EEF8 /* HomeTabViewController.storyboard in Resources */,
 				3B6DBA53272546200034EEF8 /* LaunchScreen.storyboard in Resources */,
@@ -448,9 +466,11 @@
 				3B6DBAAB2725F1F00034EEF8 /* PopularCollectionViewCell.swift in Sources */,
 				3B6DBA82272548370034EEF8 /* MainTabBarViewController.swift in Sources */,
 				3B6DBA9B272550B00034EEF8 /* MoviesDataManager.swift in Sources */,
+				3B8047DD2728584500BF9956 /* ProfileTabViewController.swift in Sources */,
 				3B6DBA992725507D0034EEF8 /* NetworkManager.swift in Sources */,
 				3B6DBA492725461E0034EEF8 /* SceneDelegate.swift in Sources */,
 				3B6DBA9D272550DC0034EEF8 /* URLExtensions.swift in Sources */,
+				3B8047E1272873B500BF9956 /* MultiMediaModel.swift in Sources */,
 				3B6DBA942725500F0034EEF8 /* MovieConstants.swift in Sources */,
 				3B6DBA8C27254ECB0034EEF8 /* SearchTabViewController.swift in Sources */,
 			);

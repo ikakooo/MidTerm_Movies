@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -54,6 +55,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="See all  ">
                                                     <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="seeAllPopularMovies:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sOT-Ep-Tvx"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjK-ZC-YH5">
                                                 <rect key="frame" x="24" y="267.5" width="40" height="24"/>
@@ -67,6 +71,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" imagePlacement="trailing" title="See all  ">
                                                     <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="seeAllNewMovies:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VNH-GW-F5L"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.47843137254901963" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -106,7 +113,12 @@
                             <constraint firstAttribute="bottom" secondItem="KER-re-z6C" secondAttribute="bottom" id="vc6-i4-8kh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="ic_home" landscapeImage="ic_home" largeContentSizeImage="ic_home" selectedImage="ic_home" id="nsT-SU-LZ9"/>
+                    <tabBarItem key="tabBarItem" title="" id="nsT-SU-LZ9">
+                        <imageReference key="image" image="house" catalog="system" symbolScale="large"/>
+                        <imageReference key="landscapeImage" image="house" catalog="system" symbolScale="large"/>
+                        <imageReference key="largeContentSizeImage" image="house" catalog="system" symbolScale="large"/>
+                        <imageReference key="selectedImage" image="house" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="414" height="1300"/>
                     <connections>
@@ -120,7 +132,7 @@
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="ic_home" width="20" height="22"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

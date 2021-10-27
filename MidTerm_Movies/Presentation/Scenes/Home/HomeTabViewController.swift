@@ -46,8 +46,16 @@ class HomeTabViewController: UIViewController {
             
         }
     }
+    @IBAction func seeAllPopularMovies(_ sender: UIButton) {
     
-
+    
+    }
+    
+    @IBAction func seeAllNewMovies(_ sender: UIButton) {
+    
+    
+    }
+    
 
 }
 

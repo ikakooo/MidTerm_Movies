@@ -41,7 +41,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XxH-56-To8" secondAttribute="trailing" constant="20" id="tmw-mD-Kfp"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="ic_search" landscapeImage="ic_search" largeContentSizeImage="ic_search" selectedImage="ic_search" id="LCc-94-U4M"/>
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" landscapeImage="magnifyingglass" largeContentSizeImage="magnifyingglass" selectedImage="magnifyingglass" id="LCc-94-U4M"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchMovieInput" destination="rNU-jG-uKd" id="o7M-lZ-WXz"/>
@@ -55,6 +55,6 @@
     </scenes>
     <resources>
         <image name="b_Rectangle" width="341" height="62"/>
-        <image name="ic_search" width="23" height="22"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
     </resources>
 </document>

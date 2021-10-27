@@ -14,6 +14,7 @@ struct MovieConstants {
     static let BASE_URL_MOVIES = "https://api.themoviedb.org/"
     static let popularMoviesPath = "3/movie/popular"
     static let searchMoviesPath = "3/search/movie"
+    static let multiSearchPath = "3/search/multi"
     
     
     
