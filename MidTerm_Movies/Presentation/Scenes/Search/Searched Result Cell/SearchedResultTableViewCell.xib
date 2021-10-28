@@ -22,6 +22,9 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_kotlin" translatesAutoresizingMaskIntoConstraints="NO" id="NBl-W1-UoN">
                                 <rect key="frame" x="24" y="10" width="446" height="444"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="444" id="Twv-Fv-WOb"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="20"/>

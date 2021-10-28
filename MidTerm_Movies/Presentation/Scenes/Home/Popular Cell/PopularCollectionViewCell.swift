@@ -24,8 +24,8 @@ class PopularCollectionViewCell: UICollectionViewCell {
     func configure(with: Movie){
         
         
-        print("iakaooooo")
-        print(with)
+//        print("iakaooooo")
+//        print(with)
         movieName.text = with.title
        // reitingStars.setAllStatesTitle("\(String(describing: with.voteAverage ?? 0))")
         loadIMGFromInternet(ImgURL: MovieConstants.BASE_IMG_URL + (with.posterPath ?? ""))

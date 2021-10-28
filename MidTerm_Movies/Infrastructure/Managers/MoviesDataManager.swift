@@ -29,6 +29,19 @@ class MoviesDataManager {
         }
     }
     
+    func getNewMovies(page:Int,completion: @escaping ((MovieDataModel) -> Void)) {
+        let queries = ["api_key": MovieConstants.API_KEY,"page":"\(page)"]
+        
+        networkManager.get(url: MovieConstants.BASE_URL_MOVIES, path: MovieConstants.newMoviesPath , queryParams: queries) { (result: Result<MovieDataModel, Error>) in
+            switch result {
+            case .success(let apiResponse):
+                completion(apiResponse)
+            case .failure(let error):
+                print("\(error) ikakooooooooo")
+            }
+        }
+    }
+    
     func SearchMoviesBy(Name:String,completion: @escaping ((MovieDataModel) -> Void)) {
         let queries = ["api_key": MovieConstants.API_KEY,"query":"\(Name)"]
         
@@ -46,6 +59,19 @@ class MoviesDataManager {
         let queries = ["api_key": MovieConstants.API_KEY,"query":"\(Name)"]
         
         networkManager.get(url: MovieConstants.BASE_URL_MOVIES, path: MovieConstants.multiSearchPath , queryParams: queries) { (result: Result<MultiMediaModel, Error>) in
+            switch result {
+            case .success(let apiResponse):
+                completion(apiResponse)
+            case .failure(let error):
+                print("\(error) ikakooooooooo")
+            }
+        }
+    }
+    
+    func TvShowSearchBy(Name:String,completion: @escaping ((TVShowsModel) -> Void)) {
+        let queries = ["api_key": MovieConstants.API_KEY,"query":"\(Name)"]
+        
+        networkManager.get(url: MovieConstants.BASE_URL_MOVIES, path: MovieConstants.multiSearchPath , queryParams: queries) { (result: Result<TVShowsModel, Error>) in
             switch result {
             case .success(let apiResponse):
                 completion(apiResponse)

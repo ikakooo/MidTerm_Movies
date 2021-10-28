@@ -15,6 +15,8 @@ struct MovieConstants {
     static let popularMoviesPath = "3/movie/popular"
     static let searchMoviesPath = "3/search/movie"
     static let multiSearchPath = "3/search/multi"
+    static let searchTVShowsPasth = "3/search/tv"
+    static let newMoviesPath = "3/movie/latest"
     
     
     

@@ -25,15 +25,25 @@ class SearchedResultTableViewCell: UITableViewCell {
     }
     
     
+//    func configure(with: Media){
+//
+//
+//        print("iakaooooo")
+//        print(with)
+//        filmName.text = with.title
+//        raitingStar.setAllStatesTitle("\(String(describing: with.voteAverage ?? 0))")
+//        loadIMGFromInternet(ImgURL: MovieConstants.BASE_IMG_URL + (with.posterPath ?? ""))
+//    }
     func configure(with: Media){
         
         
         print("iakaooooo")
         print(with)
-        filmName.text = with.title
+        filmName.text = with.originalName
         raitingStar.setAllStatesTitle("\(String(describing: with.voteAverage ?? 0))")
         loadIMGFromInternet(ImgURL: MovieConstants.BASE_IMG_URL + (with.posterPath ?? ""))
     }
+
     
     
     func loadIMGFromInternet(ImgURL:String){

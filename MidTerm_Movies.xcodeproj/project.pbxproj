@@ -34,6 +34,7 @@
 		3B8047DD2728584500BF9956 /* ProfileTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8047DC2728584500BF9956 /* ProfileTabViewController.swift */; };
 		3B8047DF2728585500BF9956 /* ProfileTabViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8047DE2728585500BF9956 /* ProfileTabViewController.storyboard */; };
 		3B8047E1272873B500BF9956 /* MultiMediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8047E0272873B500BF9956 /* MultiMediaModel.swift */; };
+		3B8047E52729CF3200BF9956 /* TVShowsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8047E42729CF3100BF9956 /* TVShowsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		3B8047DC2728584500BF9956 /* ProfileTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabViewController.swift; sourceTree = "<group>"; };
 		3B8047DE2728585500BF9956 /* ProfileTabViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTabViewController.storyboard; sourceTree = "<group>"; };
 		3B8047E0272873B500BF9956 /* MultiMediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMediaModel.swift; sourceTree = "<group>"; };
+		3B8047E42729CF3100BF9956 /* TVShowsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +287,7 @@
 			children = (
 				3B6DBA96272550450034EEF8 /* MovieDataModel.swift */,
 				3B8047E0272873B500BF9956 /* MultiMediaModel.swift */,
+				3B8047E42729CF3100BF9956 /* TVShowsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				3B6DBA992725507D0034EEF8 /* NetworkManager.swift in Sources */,
 				3B6DBA492725461E0034EEF8 /* SceneDelegate.swift in Sources */,
 				3B6DBA9D272550DC0034EEF8 /* URLExtensions.swift in Sources */,
+				3B8047E52729CF3200BF9956 /* TVShowsModel.swift in Sources */,
 				3B8047E1272873B500BF9956 /* MultiMediaModel.swift in Sources */,
 				3B6DBA942725500F0034EEF8 /* MovieConstants.swift in Sources */,
 				3B6DBA8C27254ECB0034EEF8 /* SearchTabViewController.swift in Sources */,

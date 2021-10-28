@@ -56,24 +56,31 @@ class SearchTabViewController: UIViewController {
         movieManager.MultiMediaSearchBy(Name: valueChangedText){ allContent in
             print(allContent)
             print("sndfkjnsd")
-            
+
             self.movies = (allContent.results ?? []).filter{$0.mediaType == MediaType.movie}
             self.tvShows = (allContent.results ?? []).filter{$0.mediaType == MediaType.tv}
             print(self.movies.count)
             print(self.tvShows.count)
-            
+
             DispatchQueue.main.async {
                 self.searchedMoviesTable.reloadData()
             }
         }
+        
+//        movieManager.TvShowSearchBy(Name: valueChangedText){tvShows in
+//            self.tvShows = tvShows.results ?? []
+//             print(tvShows)
+//
+//            DispatchQueue.main.async {
+//                self.searchedMoviesTable.reloadData()
+//            }
+//
+//        }
     }
     
     
     func createCustomTableHeaderView (title : String)->UIView{
-        let headerView = UIView(frame: CGRect(x: 0,
-                                              y: 0,
-                                              width: self.searchedMoviesTable.frame.width,
-                                              height: 40))
+        let headerView = UIView()
       
         
         lazy var myLabel: UILabel = {
@@ -85,40 +92,56 @@ class SearchTabViewController: UIViewController {
             return label
         }()
         
-//        let lineView = UIView(frame: CGRect(x: 0,
-//                                              y: 0,
-//                                            width: self.searchedMoviesTable.frame.width - myLabel.frame.width,
-//                                              height: 3))
-       
+        let lineView = UIView(frame: CGRect(x: 0,y: 0,width: self.searchedMoviesTable.frame.width ,height: 3))
         
         
-//        headerView.addSubview(lineView)
-//        lineView.backgroundColor = .gray
+        headerView.addSubview(lineView)
+        lineView.backgroundColor = .gray
         
         headerView.addSubview(myLabel)
         headerView.backgroundColor = .white
+       
         
-     
+        
+        // Set its constraint to display it on screen
+    NSLayoutConstraint.activate([
+    
+        headerView.heightAnchor.constraint(equalToConstant:  40),
+//        line.centerYAnchor.constraint(equalTo: headerView.centerYAnchor),
+//        line.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
+//        line.bottomAnchor.constraint(equalTo: headerView.bottomAnchor, constant:   20.0)
+    ])
         
        
-            
+     
             // Set its constraint to display it on screen
-        myLabel.heightAnchor.constraint(equalToConstant:  myLabel.frame.height).isActive = true
-        myLabel.widthAnchor.constraint(equalToConstant:  myLabel.frame.width).isActive = true
-        myLabel.leadingAnchor.constraint(equalTo: headerView.leadingAnchor).isActive = true
-        myLabel.trailingAnchor.constraint(equalTo: headerView.trailingAnchor).isActive = true
-        myLabel.topAnchor.constraint(equalTo: headerView.topAnchor).isActive = true
-        myLabel.bottomAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
-
+        NSLayoutConstraint.activate([
+            myLabel.heightAnchor.constraint(equalToConstant:  40),
+           // myLabel.widthAnchor.constraint(equalToConstant:  headerView.frame.width),
+            myLabel.leadingAnchor.constraint(equalTo: headerView.leadingAnchor),
+            //myLabel.trailingAnchor.constraint(equalTo: lineView.trailingAnchor),
+            //myLabel.topAnchor.constraint(equalTo: headerView.topAnchor),
+           // myLabel.bottomAnchor.constraint(equalTo: headerView.bottomAnchor),
+            myLabel.centerYAnchor.constraint(equalTo: headerView.centerYAnchor)
+            //myLabel.centerXAnchor.constraint(equalTo: headerView.centerXAnchor)
+        ])
+       
+       // line.center =  myLabel.center
         
         
       
-//        // Set its constraint to display it on screen
-//        lineView.widthAnchor.constraint(equalToConstant: headerView.frame.width - myLabel.frame.width).isActive = true
-//        lineView.leadingAnchor.constraint(equalTo: myLabel.leadingAnchor).isActive = true
-//        lineView.trailingAnchor.constraint(equalTo: headerView.trailingAnchor).isActive = true
-//        lineView.topAnchor.constraint(equalTo: headerView.topAnchor).isActive = true
-//        lineView.bottomAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
+        // Set its constraint to display it on screen
+        NSLayoutConstraint.activate([
+            lineView.heightAnchor.constraint(equalToConstant:  40),
+           // lineView.widthAnchor.constraint(equalToConstant: headerView.frame.width - myLabel.frame.width),
+           // lineView.leadingAnchor.constraint(equalTo: myLabel.trailingAnchor),
+            lineView.trailingAnchor.constraint(equalTo: headerView.trailingAnchor),
+            // lineView.topAnchor.constraint(equalTo: headerView.topAnchor),
+            lineView.bottomAnchor.constraint(equalTo: headerView.bottomAnchor),
+            lineView.centerYAnchor.constraint(equalTo: headerView.centerYAnchor)
+            //lineView.centerXAnchor.constraint(equalTo: headerView.centerXAnchor)
+        ])
+        //lineView.frame.origin.y =   headerView.bounds.maxY / 2 // headerView.bounds.maxY/2
         
         return headerView
     }
@@ -129,16 +152,14 @@ class SearchTabViewController: UIViewController {
 extension SearchTabViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-            return 2
+        switch (true) {
+        case !self.movies.isEmpty && !self.tvShows.isEmpty: return 2
+        case !self.movies.isEmpty || !self.tvShows.isEmpty  : return 1
+       
+        default: return 0
         }
-    
-    // Create a standard header that includes the returned text.
-    func tableView(_ tableView: UITableView, titleForHeaderInSection
-                                section: Int) -> String? {
-        
-        
-       return "Header \(section)"
     }
+    
     
     // Header Cell
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -147,7 +168,8 @@ extension SearchTabViewController: UITableViewDataSource {
         
             switch (section) {
             case 0:
-                headerCell = createCustomTableHeaderView (title : "TV SHOWS")
+                if !self.movies.isEmpty{ headerCell = createCustomTableHeaderView (title : "TV SHOWS")} else {
+                    headerCell =  createCustomTableHeaderView (title : "MOVIES")}
             case 1:
                 headerCell =  createCustomTableHeaderView (title : "MOVIES")
             case 2:
@@ -155,6 +177,13 @@ extension SearchTabViewController: UITableViewDataSource {
             default:
                 headerCell = createCustomTableHeaderView (title : "Other")
             }
+        
+//        switch (true) {
+//        case !self.movies.isEmpty:
+//        case !self.tvShows.isEmpty  : return 1
+//        case !self.movies.isEmpty && !self.tvShows.isEmpty: return 2
+//        default: return 0
+//        }
 
             return headerCell
         }
@@ -173,7 +202,7 @@ extension SearchTabViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row <= tvShows.count {
+        if indexPath.row < tvShows.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SearchedResultTableViewCell", for: indexPath) as! SearchedResultTableViewCell
             cell.configure(with: tvShows[indexPath.row])
             

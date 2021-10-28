@@ -39,11 +39,20 @@ class HomeTabViewController: UIViewController {
         movieManager.getMovies(page: 1 ) { movies in
             self.movies = movies.results ?? []
             // print(movies)
+            print("\(movies) ikakoooooooooooo")
+            let cvccdv = movies.results?[0]
             
             DispatchQueue.main.async {
                 self.popularMoviesHorisontalColectionView.reloadData()
             }
             
+        }
+        
+        movieManager.getNewMovies(page: 1){movies in
+            
+            let cvccdv = movies.results?[0]
+            
+//             print("\(movies) ikakoooooooooooo")
         }
     }
     @IBAction func seeAllPopularMovies(_ sender: UIButton) {
