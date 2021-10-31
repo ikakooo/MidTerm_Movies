@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Tab View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SearchTabViewController" id="Y6W-OH-hqX" customClass="SearchTabViewController" customModule="MidTerm_Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="   Search" textAlignment="center" minimumFontSize="17" background="b_Rectangle" disabledBackground="b_Rectangle" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rNU-jG-uKd">
+                                <rect key="frame" x="20" y="69" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="W2N-3r-X2N"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XxH-56-To8">
+                                <rect key="frame" x="20" y="129" width="374" height="684"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XxH-56-To8" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="BDH-hH-JRg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rNU-jG-uKd" secondAttribute="trailing" constant="20" id="HYG-qf-Ixy"/>
+                            <constraint firstItem="XxH-56-To8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="aFH-Qb-9Sk"/>
+                            <constraint firstItem="rNU-jG-uKd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="ktk-ja-yIG"/>
+                            <constraint firstItem="XxH-56-To8" firstAttribute="top" secondItem="rNU-jG-uKd" secondAttribute="bottom" id="oCU-ku-Gi0"/>
+                            <constraint firstItem="rNU-jG-uKd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="onp-GY-cjC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XxH-56-To8" secondAttribute="trailing" constant="20" id="tmw-mD-Kfp"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" landscapeImage="magnifyingglass" largeContentSizeImage="magnifyingglass" selectedImage="magnifyingglass" id="LCc-94-U4M"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchMovieInput" destination="rNU-jG-uKd" id="o7M-lZ-WXz"/>
+                        <outlet property="searchedMoviesTable" destination="XxH-56-To8" id="cxB-L3-NgA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="b_Rectangle" width="341" height="62"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+    </resources>
+</document>

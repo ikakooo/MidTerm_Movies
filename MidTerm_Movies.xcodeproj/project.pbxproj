@@ -35,6 +35,12 @@
 		3B8047DF2728585500BF9956 /* ProfileTabViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8047DE2728585500BF9956 /* ProfileTabViewController.storyboard */; };
 		3B8047E1272873B500BF9956 /* MultiMediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8047E0272873B500BF9956 /* MultiMediaModel.swift */; };
 		3B8047E52729CF3200BF9956 /* TVShowsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8047E42729CF3100BF9956 /* TVShowsModel.swift */; };
+		3BD28D8C272D3D9C00ED88A2 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD28D8B272D3D9C00ED88A2 /* GradientView.swift */; };
+		3BD925EE272C013C00D94A4A /* UDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD925ED272C013C00D94A4A /* UDManager.swift */; };
+		3BD925F2272C2B6200D94A4A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD925F1272C2B6200D94A4A /* RegisterViewController.swift */; };
+		3BD925F4272C2B6D00D94A4A /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD925F3272C2B6D00D94A4A /* RegisterViewController.storyboard */; };
+		3BD925F6272C2C2900D94A4A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD925F5272C2C2900D94A4A /* LoginViewController.swift */; };
+		3BD925F8272C2C3600D94A4A /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD925F7272C2C3600D94A4A /* LoginViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +92,12 @@
 		3B8047DE2728585500BF9956 /* ProfileTabViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTabViewController.storyboard; sourceTree = "<group>"; };
 		3B8047E0272873B500BF9956 /* MultiMediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMediaModel.swift; sourceTree = "<group>"; };
 		3B8047E42729CF3100BF9956 /* TVShowsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsModel.swift; sourceTree = "<group>"; };
+		3BD28D8B272D3D9C00ED88A2 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		3BD925ED272C013C00D94A4A /* UDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDManager.swift; sourceTree = "<group>"; };
+		3BD925F1272C2B6200D94A4A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3BD925F3272C2B6D00D94A4A /* RegisterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterViewController.storyboard; sourceTree = "<group>"; };
+		3BD925F5272C2C2900D94A4A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3BD925F7272C2C3600D94A4A /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +203,7 @@
 		3B6DBA79272546860034EEF8 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				3BD28D8A272D3D6C00ED88A2 /* Custom UI Components */,
 				3B6DBA9227254FEE0034EEF8 /* Contants */,
 				3B6DBA9127254FE30034EEF8 /* Domain */,
 				3B6DBA9027254FD90034EEF8 /* Managers */,
@@ -211,9 +224,8 @@
 		3B6DBA7B272546F50034EEF8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				3B8047DB272857FB00BF9956 /* Profile */,
-				3B6DBA8A27254E830034EEF8 /* Search */,
-				3B6DBA8527254BDC0034EEF8 /* Home */,
+				3BD925EF272C2AFA00D94A4A /* Login */,
+				3BD925F0272C2B2F00D94A4A /* Register */,
 				3B6DBA7E272547C60034EEF8 /* Main Tab Bar */,
 			);
 			path = Scenes;
@@ -222,6 +234,9 @@
 		3B6DBA7E272547C60034EEF8 /* Main Tab Bar */ = {
 			isa = PBXGroup;
 			children = (
+				3B8047DB272857FB00BF9956 /* Profile */,
+				3B6DBA8A27254E830034EEF8 /* Search */,
+				3B6DBA8527254BDC0034EEF8 /* Home */,
 				3B6DBA81272548370034EEF8 /* MainTabBarViewController.swift */,
 				3B6DBA83272549F30034EEF8 /* MainTabBarViewController.storyboard */,
 			);
@@ -262,6 +277,7 @@
 			children = (
 				3B6DBA982725507D0034EEF8 /* NetworkManager.swift */,
 				3B6DBA9A272550B00034EEF8 /* MoviesDataManager.swift */,
+				3BD925ED272C013C00D94A4A /* UDManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -317,6 +333,32 @@
 				3B8047DE2728585500BF9956 /* ProfileTabViewController.storyboard */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		3BD28D8A272D3D6C00ED88A2 /* Custom UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				3BD28D8B272D3D9C00ED88A2 /* GradientView.swift */,
+			);
+			path = "Custom UI Components";
+			sourceTree = "<group>";
+		};
+		3BD925EF272C2AFA00D94A4A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3BD925F5272C2C2900D94A4A /* LoginViewController.swift */,
+				3BD925F7272C2C3600D94A4A /* LoginViewController.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3BD925F0272C2B2F00D94A4A /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				3BD925F1272C2B6200D94A4A /* RegisterViewController.swift */,
+				3BD925F3272C2B6D00D94A4A /* RegisterViewController.storyboard */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,6 +477,8 @@
 				3B6DBA8927254C830034EEF8 /* HomeTabViewController.storyboard in Resources */,
 				3B6DBA53272546200034EEF8 /* LaunchScreen.storyboard in Resources */,
 				3B6DBA84272549F30034EEF8 /* MainTabBarViewController.storyboard in Resources */,
+				3BD925F4272C2B6D00D94A4A /* RegisterViewController.storyboard in Resources */,
+				3BD925F8272C2C3600D94A4A /* LoginViewController.storyboard in Resources */,
 				3B6DBA50272546200034EEF8 /* Assets.xcassets in Resources */,
 				3B6DBAA72725697F0034EEF8 /* SearchedResultTableViewCell.xib in Resources */,
 			);
@@ -463,16 +507,20 @@
 			files = (
 				3B6DBA9F272551000034EEF8 /* ViewExtensions.swift in Sources */,
 				3B6DBA472725461E0034EEF8 /* AppDelegate.swift in Sources */,
+				3BD28D8C272D3D9C00ED88A2 /* GradientView.swift in Sources */,
 				3B6DBA8727254C780034EEF8 /* HomeTabViewController.swift in Sources */,
 				3B6DBAA62725697F0034EEF8 /* SearchedResultTableViewCell.swift in Sources */,
+				3BD925F6272C2C2900D94A4A /* LoginViewController.swift in Sources */,
 				3B6DBA97272550450034EEF8 /* MovieDataModel.swift in Sources */,
 				3B6DBAAB2725F1F00034EEF8 /* PopularCollectionViewCell.swift in Sources */,
 				3B6DBA82272548370034EEF8 /* MainTabBarViewController.swift in Sources */,
 				3B6DBA9B272550B00034EEF8 /* MoviesDataManager.swift in Sources */,
 				3B8047DD2728584500BF9956 /* ProfileTabViewController.swift in Sources */,
+				3BD925F2272C2B6200D94A4A /* RegisterViewController.swift in Sources */,
 				3B6DBA992725507D0034EEF8 /* NetworkManager.swift in Sources */,
 				3B6DBA492725461E0034EEF8 /* SceneDelegate.swift in Sources */,
 				3B6DBA9D272550DC0034EEF8 /* URLExtensions.swift in Sources */,
+				3BD925EE272C013C00D94A4A /* UDManager.swift in Sources */,
 				3B8047E52729CF3200BF9956 /* TVShowsModel.swift in Sources */,
 				3B8047E1272873B500BF9956 /* MultiMediaModel.swift in Sources */,
 				3B6DBA942725500F0034EEF8 /* MovieConstants.swift in Sources */,
@@ -649,6 +697,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MidTerm_Movies/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = BOXOFFICE;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -676,6 +725,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MidTerm_Movies/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = BOXOFFICE;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
