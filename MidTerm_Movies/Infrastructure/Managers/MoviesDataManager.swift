@@ -16,7 +16,20 @@ class MoviesDataManager {
         self.networkManager = networkManager
     }
     
-    func getMovies(page:Int,completion: @escaping ((MovieDataModel) -> Void)) {
+    func getMovies(page:Int,path:String, completion: @escaping ((MovieDataModel) -> Void)) {
+        let queries = ["api_key": MovieConstants.API_KEY,"page":"\(page)"]
+        
+        networkManager.get(url: MovieConstants.BASE_URL_MOVIES, path: path , queryParams: queries) { (result: Result<MovieDataModel, Error>) in
+            switch result {
+            case .success(let apiResponse):
+                completion(apiResponse)
+            case .failure(let error):
+                print("\(error) ikakooooooooo")
+            }
+        }
+    }
+    
+    func getPopularMovies(page:Int,completion: @escaping ((MovieDataModel) -> Void)) {
         let queries = ["api_key": MovieConstants.API_KEY,"page":"\(page)"]
         
         networkManager.get(url: MovieConstants.BASE_URL_MOVIES, path: MovieConstants.popularMoviesPath , queryParams: queries) { (result: Result<MovieDataModel, Error>) in
@@ -33,6 +46,31 @@ class MoviesDataManager {
         let queries = ["api_key": MovieConstants.API_KEY,"page":"\(page)"]
         
         networkManager.get(url: MovieConstants.BASE_URL_MOVIES, path: MovieConstants.newMoviesPath , queryParams: queries) { (result: Result<MovieDataModel, Error>) in
+            switch result {
+            case .success(let apiResponse):
+                completion(apiResponse)
+            case .failure(let error):
+                print("\(error) ikakooooooooo")
+            }
+        }
+    }
+    func getNowPlayingMovies(page:Int,completion: @escaping ((MovieDataModel) -> Void)) {
+        let queries = ["api_key": MovieConstants.API_KEY,"page":"\(page)"]
+        
+        networkManager.get(url: MovieConstants.BASE_URL_MOVIES, path: MovieConstants.nowPlayingMoviesPath , queryParams: queries) { (result: Result<MovieDataModel, Error>) in
+            switch result {
+            case .success(let apiResponse):
+                completion(apiResponse)
+            case .failure(let error):
+                print("\(error) ikakooooooooo")
+            }
+        }
+    }
+    
+    func getTopRatedMovies(page:Int,completion: @escaping ((MovieDataModel) -> Void)) {
+        let queries = ["api_key": MovieConstants.API_KEY,"page":"\(page)"]
+        
+        networkManager.get(url: MovieConstants.BASE_URL_MOVIES, path: MovieConstants.topRatedMoviesPath , queryParams: queries) { (result: Result<MovieDataModel, Error>) in
             switch result {
             case .success(let apiResponse):
                 completion(apiResponse)

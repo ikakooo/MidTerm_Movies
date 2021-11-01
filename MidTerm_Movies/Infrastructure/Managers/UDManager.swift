@@ -25,7 +25,7 @@ struct UDManager {
     }
     
     static func isUserLoggedIn() -> Bool {
-        false
+        true
         //ud.bool(forKey: KEY_IS_USER_LOGGED_IN)
         //return true
     }
