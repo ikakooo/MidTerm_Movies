@@ -25,16 +25,16 @@ struct UDManager {
     }
     
     static func isUserLoggedIn() -> Bool {
-        true
-        //ud.bool(forKey: KEY_IS_USER_LOGGED_IN)
-        //return true
+        
+        ud.bool(forKey: KEY_IS_USER_LOGGED_IN)
+        //return false
     }
     
-//    static func saveUserAndMarkUserAsLoggedIn(user: User) {
-//        ud.set(true, forKey: KEY_IS_USER_LOGGED_IN)
-//        ud.set(user.username,forKey: KEY_USER_CREDENTIAL_USERNAME)
-//        ud.set(user.password,forKey: KEY_USER_CREDENTIAL_PASSWORD)
-//    }
+    static func saveUserAndMarkUserAsLoggedIn(user: User) {
+        ud.set(true, forKey: KEY_IS_USER_LOGGED_IN)
+        ud.set(user.username,forKey: KEY_USER_CREDENTIAL_USERNAME)
+        ud.set(user.password,forKey: KEY_USER_CREDENTIAL_PASSWORD)
+    }
 //
 //    static func getUser()->User?{
 //        let username =  ud.string(forKey: KEY_USER_CREDENTIAL_USERNAME) ?? ""

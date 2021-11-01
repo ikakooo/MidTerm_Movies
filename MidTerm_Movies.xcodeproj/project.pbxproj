@@ -45,6 +45,7 @@
 		3BC5D24727307BB700306E06 /* MovieFullScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC5D24627307BB700306E06 /* MovieFullScreenViewController.storyboard */; };
 		3BC5D24B2730893200306E06 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC5D2492730893200306E06 /* MovieTableViewCell.swift */; };
 		3BC5D24C2730893200306E06 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC5D24A2730893200306E06 /* MovieTableViewCell.xib */; };
+		3BC5D24E2730958F00306E06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC5D24D2730958F00306E06 /* User.swift */; };
 		3BD28D8C272D3D9C00ED88A2 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD28D8B272D3D9C00ED88A2 /* GradientView.swift */; };
 		3BD925EE272C013C00D94A4A /* UDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD925ED272C013C00D94A4A /* UDManager.swift */; };
 		3BD925F2272C2B6200D94A4A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD925F1272C2B6200D94A4A /* RegisterViewController.swift */; };
@@ -112,6 +113,7 @@
 		3BC5D24627307BB700306E06 /* MovieFullScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieFullScreenViewController.storyboard; sourceTree = "<group>"; };
 		3BC5D2492730893200306E06 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		3BC5D24A2730893200306E06 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		3BC5D24D2730958F00306E06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3BD28D8B272D3D9C00ED88A2 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		3BD925ED272C013C00D94A4A /* UDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDManager.swift; sourceTree = "<group>"; };
 		3BD925F1272C2B6200D94A4A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 				3B6DBA96272550450034EEF8 /* MovieDataModel.swift */,
 				3B8047E0272873B500BF9956 /* MultiMediaModel.swift */,
 				3B8047E42729CF3100BF9956 /* TVShowsModel.swift */,
+				3BC5D24D2730958F00306E06 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				3BC5D237272FF99500306E06 /* CustomUIViews.swift in Sources */,
 				3B6DBA472725461E0034EEF8 /* AppDelegate.swift in Sources */,
 				3BD28D8C272D3D9C00ED88A2 /* GradientView.swift in Sources */,
+				3BC5D24E2730958F00306E06 /* User.swift in Sources */,
 				3B6DBA8727254C780034EEF8 /* HomeTabViewController.swift in Sources */,
 				3B6DBAA62725697F0034EEF8 /* SearchedResultTableViewCell.swift in Sources */,
 				3BD925F6272C2C2900D94A4A /* LoginViewController.swift in Sources */,
