@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,23 +8,87 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Movie Full Screen View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="MovieFullScreenViewController" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieFullScreenViewController" id="Y6W-OH-hqX" customClass="MovieFullScreenViewController" customModule="MidTerm_Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kingfisher-7.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Z8d-fb-qtI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="kbb-zL-WSD"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ql5-2q-Dxs" customClass="GradientViewForFulScreenView" customModule="MidTerm_Movies" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playButton" translatesAutoresizingMaskIntoConstraints="NO" id="Cpb-Cr-LIm">
+                                        <rect key="frame" x="157.66666666666666" y="135" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="AMY-Tu-39n"/>
+                                            <constraint firstAttribute="width" constant="60" id="M1N-cl-x5F"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhs-2W-NED">
+                                        <rect key="frame" x="16" y="366" width="343" height="81.333333333333314"/>
+                                        <string key="text">Having spent most of her life exploring the jungle, nothing could prepare Dora for her most dangerous adventure yet — high school. </string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dora and the lost city of gold " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBN-mU-EXx">
+                                        <rect key="frame" x="16" y="253" width="343" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="QBN-mU-EXx" firstAttribute="top" secondItem="Cpb-Cr-LIm" secondAttribute="bottom" constant="58" id="7ge-G8-HSc"/>
+                                    <constraint firstItem="Lhs-2W-NED" firstAttribute="leading" secondItem="QBN-mU-EXx" secondAttribute="leading" id="IH3-kC-dAx"/>
+                                    <constraint firstItem="Lhs-2W-NED" firstAttribute="top" secondItem="QBN-mU-EXx" secondAttribute="bottom" constant="90" id="Qyi-2j-D1C"/>
+                                    <constraint firstItem="Cpb-Cr-LIm" firstAttribute="centerX" secondItem="ql5-2q-Dxs" secondAttribute="centerX" id="S0k-Em-Nhz"/>
+                                    <constraint firstItem="Lhs-2W-NED" firstAttribute="trailing" secondItem="QBN-mU-EXx" secondAttribute="trailing" id="fTs-2e-8eK"/>
+                                    <constraint firstItem="QBN-mU-EXx" firstAttribute="leading" secondItem="ql5-2q-Dxs" secondAttribute="leading" constant="16" id="hti-7Z-oJd"/>
+                                    <constraint firstAttribute="trailing" secondItem="QBN-mU-EXx" secondAttribute="trailing" constant="16" id="k1G-dQ-MzV"/>
+                                    <constraint firstItem="Cpb-Cr-LIm" firstAttribute="top" secondItem="ql5-2q-Dxs" secondAttribute="top" constant="135" id="tfF-sJ-g9z"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z8d-fb-qtI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0uG-XJ-cve"/>
+                            <constraint firstItem="ql5-2q-Dxs" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="2Pz-Bf-rHg"/>
+                            <constraint firstItem="ql5-2q-Dxs" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Cdu-ho-nrX"/>
+                            <constraint firstItem="ql5-2q-Dxs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dZG-7D-0sx"/>
+                            <constraint firstItem="Z8d-fb-qtI" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="tiF-8p-iuw"/>
+                            <constraint firstAttribute="bottom" secondItem="ql5-2q-Dxs" secondAttribute="bottom" id="vcB-sv-vWK"/>
+                            <constraint firstItem="Z8d-fb-qtI" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="yFt-0S-EUd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="filmName" destination="QBN-mU-EXx" id="RTM-N1-6NV"/>
+                        <outlet property="filmdescription" destination="Lhs-2W-NED" id="MFC-Ae-T69"/>
+                        <outlet property="moviePhoto" destination="Z8d-fb-qtI" id="MAb-uL-eiX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87" y="92"/>
+            <point key="canvasLocation" x="53.600000000000001" y="77.58620689655173"/>
         </scene>
     </scenes>
     <resources>
+        <image name="kingfisher-7.jpg" width="40.816326141357422" height="40.816326141357422"/>
+        <image name="playButton" width="60" height="60"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

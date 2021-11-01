@@ -39,8 +39,12 @@
 		3BC5D233272FE57A00306E06 /* ForgotPasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC5D232272FE57A00306E06 /* ForgotPasswordViewController.storyboard */; };
 		3BC5D235272FF76B00306E06 /* ImgViewsCustomisations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC5D234272FF76B00306E06 /* ImgViewsCustomisations.swift */; };
 		3BC5D237272FF99500306E06 /* CustomUIViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC5D236272FF99500306E06 /* CustomUIViews.swift */; };
-		3BC5D23A2730657300306E06 /* MovieFullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC5D2392730657300306E06 /* MovieFullScreenViewController.swift */; };
-		3BC5D23E2730773A00306E06 /* MovieFullScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC5D23D2730773A00306E06 /* MovieFullScreenViewController.storyboard */; };
+		3BC5D241273079AD00306E06 /* InfinityMoviesByCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC5D240273079AD00306E06 /* InfinityMoviesByCategoryViewController.swift */; };
+		3BC5D243273079BB00306E06 /* InfinityMoviesByCategoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC5D242273079BB00306E06 /* InfinityMoviesByCategoryViewController.storyboard */; };
+		3BC5D24527307BAC00306E06 /* MovieFullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC5D24427307BAC00306E06 /* MovieFullScreenViewController.swift */; };
+		3BC5D24727307BB700306E06 /* MovieFullScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC5D24627307BB700306E06 /* MovieFullScreenViewController.storyboard */; };
+		3BC5D24B2730893200306E06 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC5D2492730893200306E06 /* MovieTableViewCell.swift */; };
+		3BC5D24C2730893200306E06 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC5D24A2730893200306E06 /* MovieTableViewCell.xib */; };
 		3BD28D8C272D3D9C00ED88A2 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD28D8B272D3D9C00ED88A2 /* GradientView.swift */; };
 		3BD925EE272C013C00D94A4A /* UDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD925ED272C013C00D94A4A /* UDManager.swift */; };
 		3BD925F2272C2B6200D94A4A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD925F1272C2B6200D94A4A /* RegisterViewController.swift */; };
@@ -102,8 +106,12 @@
 		3BC5D232272FE57A00306E06 /* ForgotPasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPasswordViewController.storyboard; sourceTree = "<group>"; };
 		3BC5D234272FF76B00306E06 /* ImgViewsCustomisations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgViewsCustomisations.swift; sourceTree = "<group>"; };
 		3BC5D236272FF99500306E06 /* CustomUIViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIViews.swift; sourceTree = "<group>"; };
-		3BC5D2392730657300306E06 /* MovieFullScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieFullScreenViewController.swift; path = "../../../../../../TheMoviesDB_IOS/Task_16_Movies/Presentation/Scenes/Movie FullScreen/MovieFullScreenViewController.swift"; sourceTree = "<group>"; };
-		3BC5D23D2730773A00306E06 /* MovieFullScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieFullScreenViewController.storyboard; sourceTree = "<group>"; };
+		3BC5D240273079AD00306E06 /* InfinityMoviesByCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityMoviesByCategoryViewController.swift; sourceTree = "<group>"; };
+		3BC5D242273079BB00306E06 /* InfinityMoviesByCategoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfinityMoviesByCategoryViewController.storyboard; sourceTree = "<group>"; };
+		3BC5D24427307BAC00306E06 /* MovieFullScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFullScreenViewController.swift; sourceTree = "<group>"; };
+		3BC5D24627307BB700306E06 /* MovieFullScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieFullScreenViewController.storyboard; sourceTree = "<group>"; };
+		3BC5D2492730893200306E06 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		3BC5D24A2730893200306E06 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		3BD28D8B272D3D9C00ED88A2 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		3BD925ED272C013C00D94A4A /* UDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDManager.swift; sourceTree = "<group>"; };
 		3BD925F1272C2B6200D94A4A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -362,8 +370,8 @@
 		3BC5D2382730654500306E06 /* Movie FullScreen */ = {
 			isa = PBXGroup;
 			children = (
-				3BC5D2392730657300306E06 /* MovieFullScreenViewController.swift */,
-				3BC5D23D2730773A00306E06 /* MovieFullScreenViewController.storyboard */,
+				3BC5D24427307BAC00306E06 /* MovieFullScreenViewController.swift */,
+				3BC5D24627307BB700306E06 /* MovieFullScreenViewController.storyboard */,
 			);
 			path = "Movie FullScreen";
 			sourceTree = "<group>";
@@ -371,8 +379,20 @@
 		3BC5D23F2730785900306E06 /* Infinity Movies By Category */ = {
 			isa = PBXGroup;
 			children = (
+				3BC5D2482730890500306E06 /* Movie Table View Cell */,
+				3BC5D240273079AD00306E06 /* InfinityMoviesByCategoryViewController.swift */,
+				3BC5D242273079BB00306E06 /* InfinityMoviesByCategoryViewController.storyboard */,
 			);
 			path = "Infinity Movies By Category";
+			sourceTree = "<group>";
+		};
+		3BC5D2482730890500306E06 /* Movie Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3BC5D2492730893200306E06 /* MovieTableViewCell.swift */,
+				3BC5D24A2730893200306E06 /* MovieTableViewCell.xib */,
+			);
+			path = "Movie Table View Cell";
 			sourceTree = "<group>";
 		};
 		3BD28D8A272D3D6C00ED88A2 /* Custom UI Components */ = {
@@ -514,16 +534,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B6DBA8E27254EF50034EEF8 /* SearchTabViewController.storyboard in Resources */,
-				3BC5D23E2730773A00306E06 /* MovieFullScreenViewController.storyboard in Resources */,
+				3BC5D243273079BB00306E06 /* InfinityMoviesByCategoryViewController.storyboard in Resources */,
 				3B8047DF2728585500BF9956 /* ProfileTabViewController.storyboard in Resources */,
 				3B6DBAAC2725F1F00034EEF8 /* MoviesCollectionViewCell.xib in Resources */,
 				3B6DBA8927254C830034EEF8 /* HomeTabViewController.storyboard in Resources */,
 				3B6DBA53272546200034EEF8 /* LaunchScreen.storyboard in Resources */,
 				3B6DBA84272549F30034EEF8 /* MainTabBarViewController.storyboard in Resources */,
 				3BC5D233272FE57A00306E06 /* ForgotPasswordViewController.storyboard in Resources */,
+				3BC5D24C2730893200306E06 /* MovieTableViewCell.xib in Resources */,
 				3BD925F4272C2B6D00D94A4A /* RegisterViewController.storyboard in Resources */,
 				3BD925F8272C2C3600D94A4A /* LoginViewController.storyboard in Resources */,
 				3B6DBA50272546200034EEF8 /* Assets.xcassets in Resources */,
+				3BC5D24727307BB700306E06 /* MovieFullScreenViewController.storyboard in Resources */,
 				3B6DBAA72725697F0034EEF8 /* SearchedResultTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,9 +579,11 @@
 				3B6DBA8727254C780034EEF8 /* HomeTabViewController.swift in Sources */,
 				3B6DBAA62725697F0034EEF8 /* SearchedResultTableViewCell.swift in Sources */,
 				3BD925F6272C2C2900D94A4A /* LoginViewController.swift in Sources */,
-				3BC5D23A2730657300306E06 /* MovieFullScreenViewController.swift in Sources */,
 				3B6DBA97272550450034EEF8 /* MovieDataModel.swift in Sources */,
+				3BC5D24527307BAC00306E06 /* MovieFullScreenViewController.swift in Sources */,
+				3BC5D241273079AD00306E06 /* InfinityMoviesByCategoryViewController.swift in Sources */,
 				3B6DBAAB2725F1F00034EEF8 /* MoviesCollectionViewCell.swift in Sources */,
+				3BC5D24B2730893200306E06 /* MovieTableViewCell.swift in Sources */,
 				3BC5D231272FE56D00306E06 /* ForgotPasswordViewController.swift in Sources */,
 				3B6DBA82272548370034EEF8 /* MainTabBarViewController.swift in Sources */,
 				3B6DBA9B272550B00034EEF8 /* MoviesDataManager.swift in Sources */,

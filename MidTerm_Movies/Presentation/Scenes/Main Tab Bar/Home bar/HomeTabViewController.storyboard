@@ -216,11 +216,22 @@
                         <outlet property="popularMoviesHorisontalColectionView" destination="ekW-eF-MxT" id="UM4-Ku-Rbe"/>
                         <outlet property="topRatedMoviesHorisontalColectionView" destination="4es-7u-ltT" id="ASp-eu-KAZ"/>
                         <segue destination="6Kc-AT-6jV" kind="show" identifier="MovieFullScreenViewController" id="Rgl-Oi-1T4"/>
+                        <segue destination="I6w-4W-OHe" kind="show" identifier="InfinityMoviesByCategoryViewController" id="rvN-Wg-P72"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1955.072463768116" y="128.57142857142856"/>
+        </scene>
+        <!--InfinityMoviesByCategoryViewController-->
+        <scene sceneID="JPz-Vu-XUf">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="InfinityMoviesByCategoryViewController" storyboardName="InfinityMoviesByCategoryViewController" referencedIdentifier="InfinityMoviesByCategoryViewController" id="I6w-4W-OHe" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Hyg-oc-gr4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gHy-G7-FJa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2866" y="-19"/>
         </scene>
         <!--MovieFullScreenViewController-->
         <scene sceneID="7oN-dp-Xuf">

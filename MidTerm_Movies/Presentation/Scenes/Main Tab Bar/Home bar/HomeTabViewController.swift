@@ -20,10 +20,12 @@ class HomeTabViewController: UIViewController {
     private var NewMovies:[Movie] = []
     private var NowPlayingMovies:[Movie] = []
     private var TopRatedMovies:[Movie] = []
+    private var SelectedMovie:Movie? = nil
     
     
     
     private var page = 1
+    private var seeAllPageTag = 0
     fileprivate var cellIndexPathRow = 0
     
     
@@ -102,15 +104,10 @@ class HomeTabViewController: UIViewController {
     
     @IBAction func seeAllMovies(_ sender: UIButton) {
         
-        switch sender.tag {
-        case 0:print(sender.tag)
-        case 1:print(sender.tag)
-        case 2:print(sender.tag)
-        case 3:print(sender.tag)
-        default:print(sender.tag)
-        }
+        seeAllPageTag = sender.tag
+        performSegue(withIdentifier: "InfinityMoviesByCategoryViewController", sender: nil)
+        
     }
-    
 
 }
 
@@ -182,14 +179,30 @@ extension HomeTabViewController: UICollectionViewDelegateFlowLayout {
     }
     
    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        cellIndexPathRow = indexPath.row
+//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+//        cellIndexPathRow = indexPath.row
+//        performSegue(withIdentifier: "MovieFullScreenViewController", sender: nil)
+//    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        switch collectionView {
+        case self.popularMoviesHorisontalColectionView: SelectedMovie = PopularMovies[indexPath.row]
+        case self.newMoviesHorisontalColectionView: SelectedMovie =  NewMovies[indexPath.row]
+        case self.nowPlayingMoviesHorisontalColectionView: SelectedMovie =  NowPlayingMovies[indexPath.row]
+        case self.topRatedMoviesHorisontalColectionView: SelectedMovie =  TopRatedMovies[indexPath.row]
+        default:
+            SelectedMovie = nil
+        }
         performSegue(withIdentifier: "MovieFullScreenViewController", sender: nil)
-    }
+
+        }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let viewControler =   segue.destination as? MovieFullScreenViewController
-        viewControler?.movie = PopularMovies[cellIndexPathRow]
-        print("taskkkkkkkk \(cellIndexPathRow)")
+        viewControler?.movie = SelectedMovie
+        
+        let InfinityMoviesViewControler =   segue.destination as? InfinityMoviesByCategoryViewController
+        InfinityMoviesViewControler?.tag = seeAllPageTag
     }
 }

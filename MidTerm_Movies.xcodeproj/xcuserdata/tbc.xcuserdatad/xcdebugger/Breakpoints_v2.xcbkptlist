@@ -158,9 +158,25 @@
             filePath = "MidTerm_Movies/Presentation/Scenes/Main Tab Bar/Home bar/HomeTabViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
-            landmarkName = "collectionView(_:didDeselectItemAt:)"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "HomeTabViewController"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "47EAC066-8634-4B29-ADFB-0CAFAB3599D2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MidTerm_Movies/Presentation/Scenes/Main Tab Bar/Infinity Movies By Category/InfinityMoviesByCategoryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
