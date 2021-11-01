@@ -11,8 +11,10 @@ class RegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = .gray
 
-        // Do any additional setup after loading the view.
+        
+        
     }
     
 

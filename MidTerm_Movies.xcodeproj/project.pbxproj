@@ -37,6 +37,8 @@
 		3B8047E52729CF3200BF9956 /* TVShowsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8047E42729CF3100BF9956 /* TVShowsModel.swift */; };
 		3BC5D231272FE56D00306E06 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC5D230272FE56D00306E06 /* ForgotPasswordViewController.swift */; };
 		3BC5D233272FE57A00306E06 /* ForgotPasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC5D232272FE57A00306E06 /* ForgotPasswordViewController.storyboard */; };
+		3BC5D235272FF76B00306E06 /* ImgViewsCustomisations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC5D234272FF76B00306E06 /* ImgViewsCustomisations.swift */; };
+		3BC5D237272FF99500306E06 /* CustomUIViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC5D236272FF99500306E06 /* CustomUIViews.swift */; };
 		3BD28D8C272D3D9C00ED88A2 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD28D8B272D3D9C00ED88A2 /* GradientView.swift */; };
 		3BD925EE272C013C00D94A4A /* UDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD925ED272C013C00D94A4A /* UDManager.swift */; };
 		3BD925F2272C2B6200D94A4A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD925F1272C2B6200D94A4A /* RegisterViewController.swift */; };
@@ -96,6 +98,8 @@
 		3B8047E42729CF3100BF9956 /* TVShowsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsModel.swift; sourceTree = "<group>"; };
 		3BC5D230272FE56D00306E06 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		3BC5D232272FE57A00306E06 /* ForgotPasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPasswordViewController.storyboard; sourceTree = "<group>"; };
+		3BC5D234272FF76B00306E06 /* ImgViewsCustomisations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgViewsCustomisations.swift; sourceTree = "<group>"; };
+		3BC5D236272FF99500306E06 /* CustomUIViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIViews.swift; sourceTree = "<group>"; };
 		3BD28D8B272D3D9C00ED88A2 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		3BD925ED272C013C00D94A4A /* UDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDManager.swift; sourceTree = "<group>"; };
 		3BD925F1272C2B6200D94A4A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -353,6 +357,8 @@
 			isa = PBXGroup;
 			children = (
 				3BD28D8B272D3D9C00ED88A2 /* GradientView.swift */,
+				3BC5D234272FF76B00306E06 /* ImgViewsCustomisations.swift */,
+				3BC5D236272FF99500306E06 /* CustomUIViews.swift */,
 			);
 			path = "Custom UI Components";
 			sourceTree = "<group>";
@@ -521,6 +527,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B6DBA9F272551000034EEF8 /* ViewExtensions.swift in Sources */,
+				3BC5D235272FF76B00306E06 /* ImgViewsCustomisations.swift in Sources */,
+				3BC5D237272FF99500306E06 /* CustomUIViews.swift in Sources */,
 				3B6DBA472725461E0034EEF8 /* AppDelegate.swift in Sources */,
 				3BD28D8C272D3D9C00ED88A2 /* GradientView.swift in Sources */,
 				3B6DBA8727254C780034EEF8 /* HomeTabViewController.swift in Sources */,
