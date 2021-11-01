@@ -8,24 +8,22 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-   // @IBOutlet weak var emailFild: UITextField!
+    @IBOutlet weak var registerButton: UILabel!
+    // @IBOutlet weak var emailFild: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        emailFild.addShadow(offset: CGSize.init(width: 0, height: 3), color: UIColor.black, radius: 2.0, opacity: 0.35)
+
 
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+//    let sb = UIStoryboard(name: "DashboardViewController", bundle: nil)
+//    let vc = sb.instantiateViewController(withIdentifier: "Dashboard_Tab_Bar")
+//
+//    vc.modalPresentationStyle = .fullScreen
+//   // present(vc, animated: true)
+//  //  navigationController?.viewControllers.removeAll()
+//
+//    navigationController?.pushViewController(vc, animated: true)
 
 }

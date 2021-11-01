@@ -48,3 +48,24 @@ final class GradientViewUIButton: UIButton {
         layer.addSublayer(gradient)
     }
 }
+
+@IBDesignable
+final class ShadowForUITextField: UITextField {
+    @IBInspectable var shadowoffset: CGSize = CGSize.init(width: 0, height: 3)
+    @IBInspectable var shadowCornerRadius: CGFloat = 2.0
+    @IBInspectable var shadowColor: UIColor = UIColor.black
+    @IBInspectable var shadowOpacity: Float = 0.35
+
+    override func draw(_ rect: CGRect) {
+        layer.masksToBounds = false
+        layer.shadowOffset = shadowoffset
+        layer.shadowColor = shadowColor.cgColor
+        layer.shadowRadius = shadowCornerRadius
+        layer.shadowOpacity = shadowOpacity
+
+        let backgroundCGColor = backgroundColor?.cgColor
+        backgroundColor = nil
+        layer.backgroundColor =  backgroundCGColor
+    }
+}
+
