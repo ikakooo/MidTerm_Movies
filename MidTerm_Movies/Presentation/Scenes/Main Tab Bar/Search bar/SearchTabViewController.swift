@@ -14,7 +14,7 @@ class SearchTabViewController: UIViewController {
     private var networkManager: NetworkManagerProtocol!
     private var movieManager: MoviesDataManager!
     
-    private var movies:[Media] = []
+    private var movies:[Movie] = []
     
     private var tvShows:[Media] = []
     
@@ -44,28 +44,28 @@ class SearchTabViewController: UIViewController {
         
         guard let valueChangedText = sender.text  else { return }
         
-//        movieManager.SearchMoviesBy(Name: valueChangedText ) { movies in
-//            self.movies = movies.results ?? []
-//             print(movies)
-//
-//            DispatchQueue.main.async {
-//                self.searchedMoviesTable.reloadData()
-//            }
-//
-//        }
-        movieManager.MultiMediaSearchBy(Name: valueChangedText){ allContent in
-            print(allContent)
-            print("sndfkjnsd")
-
-            self.movies = (allContent.results ?? []).filter{$0.mediaType == MediaType.movie}
-            self.tvShows = (allContent.results ?? []).filter{$0.mediaType == MediaType.tv}
-            print(self.movies.count)
-            print(self.tvShows.count)
+        movieManager.SearchMoviesBy(Name: valueChangedText ) { movies in
+            self.movies = movies.results ?? []
+             print(movies)
 
             DispatchQueue.main.async {
                 self.searchedMoviesTable.reloadData()
             }
+
         }
+//        movieManager.MultiMediaSearchBy(Name: valueChangedText){ allContent in
+//            print(allContent)
+//            print("sndfkjnsd")
+//
+//            self.movies = (allContent.results ?? []).filter{$0.mediaType == MediaType.movie}
+//            self.tvShows = (allContent.results ?? []).filter{$0.mediaType == MediaType.tv}
+//            print(self.movies.count)
+//            print(self.tvShows.count)
+//
+//            DispatchQueue.main.async {
+//                self.searchedMoviesTable.reloadData()
+//            }
+//        }
         
 //        movieManager.TvShowSearchBy(Name: valueChangedText){tvShows in
 //            self.tvShows = tvShows.results ?? []
@@ -161,58 +161,58 @@ extension SearchTabViewController: UITableViewDataSource {
     }
     
     
-    // Header Cell
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-           
-        var headerCell:UIView?
-        
-            switch (section) {
-            case 0:
-                if !self.movies.isEmpty{ headerCell = createCustomTableHeaderView (title : "TV SHOWS")} else {
-                    headerCell =  createCustomTableHeaderView (title : "MOVIES")}
-            case 1:
-                headerCell =  createCustomTableHeaderView (title : "MOVIES")
-            case 2:
-                headerCell = createCustomTableHeaderView (title : "Vegetable")
-            default:
-                headerCell = createCustomTableHeaderView (title : "Other")
-            }
-        
-//        switch (true) {
-//        case !self.movies.isEmpty:
-//        case !self.tvShows.isEmpty  : return 1
-//        case !self.movies.isEmpty && !self.tvShows.isEmpty: return 2
-//        default: return 0
+//    // Header Cell
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//
+//        var headerCell:UIView?
+//
+//            switch (section) {
+//            case 0:
+//                if !self.movies.isEmpty{ headerCell = createCustomTableHeaderView (title : "TV SHOWS")} else {
+//                    headerCell =  createCustomTableHeaderView (title : "MOVIES")}
+//            case 1:
+//                headerCell =  createCustomTableHeaderView (title : "MOVIES")
+//            case 2:
+//                headerCell = createCustomTableHeaderView (title : "Vegetable")
+//            default:
+//                headerCell = createCustomTableHeaderView (title : "Other")
+//            }
+//
+////        switch (true) {
+////        case !self.movies.isEmpty:
+////        case !self.tvShows.isEmpty  : return 1
+////        case !self.movies.isEmpty && !self.tvShows.isEmpty: return 2
+////        default: return 0
+////        }
+//
+//            return headerCell
 //        }
-
-            return headerCell
-        }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch (section) {
-        case 0:
-            return tvShows.count
-        case 1:
-            return movies.count
+//        case 0:
+//            return tvShows.count
+//        case 1:
+//            return movies.count
         default:
-            return 0
+            return movies.count
         }
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row < tvShows.count {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "SearchedResultTableViewCell", for: indexPath) as! SearchedResultTableViewCell
-            cell.configure(with: tvShows[indexPath.row])
-            
-            return cell
-        }else {
+//        if indexPath.row < tvShows.count {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "SearchedResultTableViewCell", for: indexPath) as! SearchedResultTableViewCell
+//            cell.configure(with: tvShows[indexPath.row])
+//
+//            return cell
+//        }else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SearchedResultTableViewCell", for: indexPath) as! SearchedResultTableViewCell
             cell.configure(with: movies[indexPath.row - tvShows.count])
             
             return cell
-        }
+      //  }
         
        
     }
@@ -221,15 +221,15 @@ extension SearchTabViewController: UITableViewDataSource {
 extension SearchTabViewController: UITableViewDelegate{
     
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        cellIndexPathRow = indexPath.row
-//        performSegue(withIdentifier: "MovieFullScreenViewController", sender: nil)
-//    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let viewControler =   segue.destination as? MovieFullScreenViewController
-//        viewControler?.movie = movies[cellIndexPathRow]
-//        print("taskkkkkkkk \(cellIndexPathRow)")
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        cellIndexPathRow = indexPath.row
+        performSegue(withIdentifier: "MovieFullScreenViewController", sender: nil)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewControler =   segue.destination as? MovieFullScreenViewController
+        viewControler?.movie = movies[cellIndexPathRow]
+        print("taskkkkkkkk \(cellIndexPathRow)")
+    }
     
 }

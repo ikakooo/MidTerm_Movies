@@ -10,13 +10,13 @@
         <!--Search Tab View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="SearchTabViewController" id="Y6W-OH-hqX" customClass="SearchTabViewController" customModule="MidTerm_Movies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="SearchTabViewController" customModule="MidTerm_Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="   Search" textAlignment="center" minimumFontSize="17" background="b_Rectangle" disabledBackground="b_Rectangle" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rNU-jG-uKd">
-                                <rect key="frame" x="20" y="69" width="374" height="60"/>
+                                <rect key="frame" x="20" y="113" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="W2N-3r-X2N"/>
                                 </constraints>
@@ -25,7 +25,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XxH-56-To8">
-                                <rect key="frame" x="20" y="129" width="374" height="684"/>
+                                <rect key="frame" x="20" y="173" width="374" height="640"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -41,14 +41,44 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XxH-56-To8" secondAttribute="trailing" constant="20" id="tmw-mD-Kfp"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" landscapeImage="magnifyingglass" largeContentSizeImage="magnifyingglass" selectedImage="magnifyingglass" id="LCc-94-U4M"/>
+                    <navigationItem key="navigationItem" id="7il-MU-OGJ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchMovieInput" destination="rNU-jG-uKd" id="o7M-lZ-WXz"/>
                         <outlet property="searchedMoviesTable" destination="XxH-56-To8" id="cxB-L3-NgA"/>
+                        <segue destination="4eH-27-nGo" kind="show" identifier="MovieFullScreenViewController" id="Y0w-VB-dnj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="109.82142857142857"/>
+        </scene>
+        <!--MovieFullScreenViewController-->
+        <scene sceneID="Gt7-bO-4Kh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MovieFullScreenViewController" referencedIdentifier="MovieFullScreenViewController" id="4eH-27-nGo" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="HPA-aN-2TD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnK-8b-77U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1813" y="80"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rpA-kv-wgI">
+            <objects>
+                <navigationController storyboardIdentifier="SearchTabViewController" automaticallyAdjustsScrollViewInsets="NO" id="uwP-bl-V9u" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" landscapeImage="magnifyingglass" largeContentSizeImage="magnifyingglass" selectedImage="magnifyingglass" id="LCc-94-U4M"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8uT-UE-egr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="HTL-hF-uKI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BdR-Xi-lMl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="134.78260869565219" y="109.82142857142857"/>
         </scene>

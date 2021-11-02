@@ -15,7 +15,10 @@ class ProfileTabViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onLogOutButtonClick(_ sender: Any) {
+        UDManager.markUserAsLoggedOut()
+    }
+    
     /*
     // MARK: - Navigation
 

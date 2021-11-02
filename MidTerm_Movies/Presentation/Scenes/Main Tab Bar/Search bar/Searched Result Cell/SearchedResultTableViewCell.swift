@@ -34,14 +34,14 @@ class SearchedResultTableViewCell: UITableViewCell {
 //        raitingStar.setAllStatesTitle("\(String(describing: with.voteAverage ?? 0))")
 //        loadIMGFromInternet(ImgURL: MovieConstants.BASE_IMG_URL + (with.posterPath ?? ""))
 //    }
-    func configure(with: Media){
+    func configure(with: Movie){
         
         
         print("iakaooooo")
         print(with)
-        filmName.text = with.originalName
+        filmName.text = with.originalTitle
         raitingStar.setAllStatesTitle("\(String(describing: with.voteAverage ?? 0))")
-        loadIMGFromInternet(ImgURL: MovieConstants.BASE_IMG_URL + (with.posterPath ?? ""))
+        loadIMGFromInternet(ImgURL: MovieConstants.BASE_IMG_URL + (with.backdropPath ?? ""))
     }
 
     
