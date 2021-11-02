@@ -9,8 +9,8 @@ import UIKit
 import Kingfisher
 
 class MoviesCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var movieName: UILabel!
-    @IBOutlet weak var movieIMG: UIImageView!
+    @IBOutlet weak private var movieName: UILabel!
+    @IBOutlet weak private var movieIMG: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,12 +22,8 @@ class MoviesCollectionViewCell: UICollectionViewCell {
     
     
     func configure(with: Movie){
-        
-        
-//        print("iakaooooo")
-//        print(with)
         movieName.text = with.title
-       // reitingStars.setAllStatesTitle("\(String(describing: with.voteAverage ?? 0))")
+        // reitingStars.setAllStatesTitle("\(String(describing: with.voteAverage ?? 0))")
         loadIMGFromInternet(ImgURL: MovieConstants.BASE_IMG_URL + (with.posterPath ?? ""))
     }
     
@@ -35,7 +31,7 @@ class MoviesCollectionViewCell: UICollectionViewCell {
     func loadIMGFromInternet(ImgURL:String){
         let url = URL(string: ImgURL)
         let processor = DownsamplingImageProcessor(size: movieIMG.bounds.size)
-                     |> RoundCornerImageProcessor(cornerRadius: 20)
+        |> RoundCornerImageProcessor(cornerRadius: 20)
         movieIMG.kf.indicatorType = .activity
         movieIMG.kf.setImage(
             with: url,
@@ -57,5 +53,5 @@ class MoviesCollectionViewCell: UICollectionViewCell {
         }
     }
     
-
+    
 }

@@ -9,30 +9,27 @@ import UIKit
 import Kingfisher
 
 class MovieFullScreenViewController: UIViewController {
-    @IBOutlet weak var filmName: UILabel!
-    @IBOutlet weak var reitingStars: UIButton!
-    @IBOutlet weak var filmdescription: UILabel!
-    @IBOutlet weak var moviePhoto: UIImageView!
+    @IBOutlet weak private var filmName: UILabel!
+    @IBOutlet weak private var reitingStars: UIButton!
+    @IBOutlet weak private var filmdescription: UILabel!
+    @IBOutlet weak private var moviePhoto: UIImageView!
     
     
     var movie: Movie?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.tintColor = .gray
-        // Do any additional setup after loading the view.
-       // reitingStars.setAllStatesTitle("\(String(describing: movie?.voteAverage ?? 0))")
-       // movie?.id
         filmName.text = movie?.title
         filmdescription.text = movie?.overview
         loadIMGFromInternet(ImgURL:MovieConstants.BASE_IMG_URL + (movie?.posterPath ?? ""))
     }
     
-
+    
     func loadIMGFromInternet(ImgURL:String){
         let url = URL(string: ImgURL)
         let processor = DownsamplingImageProcessor(size: moviePhoto.bounds.size)
-                     |> RoundCornerImageProcessor(cornerRadius: 0)
+        |> RoundCornerImageProcessor(cornerRadius: 0)
         moviePhoto.kf.indicatorType = .activity
         moviePhoto.kf.setImage(
             with: url,
@@ -53,5 +50,5 @@ class MovieFullScreenViewController: UIViewController {
             }
         }
     }
-
+    
 }

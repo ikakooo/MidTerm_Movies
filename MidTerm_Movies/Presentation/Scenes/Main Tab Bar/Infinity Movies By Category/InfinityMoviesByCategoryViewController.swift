@@ -8,14 +8,14 @@
 import UIKit
 
 class InfinityMoviesByCategoryViewController: UIViewController {
-    @IBOutlet weak var movieTableView: UITableView!
+    @IBOutlet weak private var movieTableView: UITableView!
     
     private var networkManager: NetworkManagerProtocol!
     private var movieManager: MoviesDataManager!
-
+    
     private var movies:[Movie] = []
-    var tag = 0
-    var page = 1
+    public var tag = 0
+    private var page = 1
     fileprivate var cellIndexPathRow = 0
     private var categoryBaseURL = ""
     
@@ -36,7 +36,7 @@ class InfinityMoviesByCategoryViewController: UIViewController {
         default:print(tag)
         }
         print(tag)
-    
+        
         
         
         networkManager = NetworkManager()
@@ -50,7 +50,7 @@ class InfinityMoviesByCategoryViewController: UIViewController {
                 self.movieTableView.reloadData()
             }
         }
-
+        
     }
 }
 
@@ -66,7 +66,6 @@ extension InfinityMoviesByCategoryViewController: UITableViewDataSource {
         if (indexPath.row == movies.count-1 && 500 > indexPath.row){
             movieManager.getMovies(page: self.page, path: categoryBaseURL ) { movies in
                 self.movies.append(contentsOf:movies.results ?? [])
-                // print(movies)
                 
                 DispatchQueue.main.async {
                     self.movieTableView.reloadData()
@@ -89,7 +88,6 @@ extension InfinityMoviesByCategoryViewController: UITableViewDelegate{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let viewControler =   segue.destination as? MovieFullScreenViewController
         viewControler?.movie = movies[cellIndexPathRow]
-        print("taskkkkkkkk \(cellIndexPathRow)")
     }
     
 }

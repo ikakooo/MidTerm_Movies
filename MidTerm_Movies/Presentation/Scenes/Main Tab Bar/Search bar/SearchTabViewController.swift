@@ -3,7 +3,7 @@
 //  MidTerm_Movies
 //
 //  Created by MacBook Pro on 24.10.21.
-//
+// ცოდვიანი :დ
 
 import UIKit
 

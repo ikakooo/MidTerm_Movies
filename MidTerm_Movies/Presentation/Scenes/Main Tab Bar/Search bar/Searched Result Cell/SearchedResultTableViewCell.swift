@@ -9,9 +9,9 @@ import UIKit
 import Kingfisher
 
 class SearchedResultTableViewCell: UITableViewCell {
-    @IBOutlet weak var filmMainPhoto: UIImageView!
-    @IBOutlet weak var raitingStar: UIButton!
-    @IBOutlet weak var filmName: UILabel!
+    @IBOutlet weak private var filmMainPhoto: UIImageView!
+    @IBOutlet weak private var raitingStar: UIButton!
+    @IBOutlet weak private var filmName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -35,14 +35,4 @@ struct UDManager {
         ud.set(user.username,forKey: KEY_USER_CREDENTIAL_USERNAME)
         ud.set(user.password,forKey: KEY_USER_CREDENTIAL_PASSWORD)
     }
-//
-//    static func getUser()->User?{
-//        let username =  ud.string(forKey: KEY_USER_CREDENTIAL_USERNAME) ?? ""
-//        let password =  ud.string(forKey: KEY_USER_CREDENTIAL_PASSWORD) ?? ""
-//
-//        if !username.isEmpty && !password.isEmpty{
-//            return User(username: username,password: password)
-//        }else { return nil }
-//    }
-    
 }

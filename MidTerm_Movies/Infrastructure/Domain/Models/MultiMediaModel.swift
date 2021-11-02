@@ -16,7 +16,7 @@ struct MultiMediaModel: Codable {
     let page: Int?
     let results: [Media]?
     let totalPages, totalResults: Int?
-
+    
     enum CodingKeys: String, CodingKey {
         case page, results
         case totalPages = "total_pages"
@@ -45,7 +45,7 @@ struct Media: Codable {
     let gender: Int?
     let knownFor: [Media]?
     let knownForDepartment, profilePath: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case backdropPath = "backdrop_path"
         case firstAirDate = "first_air_date"

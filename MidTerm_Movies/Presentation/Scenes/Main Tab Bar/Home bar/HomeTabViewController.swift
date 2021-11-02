@@ -8,10 +8,10 @@
 import UIKit
 
 class HomeTabViewController: UIViewController {
-    @IBOutlet weak var popularMoviesHorisontalColectionView: UICollectionView!
-    @IBOutlet weak var newMoviesHorisontalColectionView: UICollectionView!
-    @IBOutlet weak var nowPlayingMoviesHorisontalColectionView: UICollectionView!
-    @IBOutlet weak var topRatedMoviesHorisontalColectionView: UICollectionView!
+    @IBOutlet weak private var popularMoviesHorisontalColectionView: UICollectionView!
+    @IBOutlet weak private var newMoviesHorisontalColectionView: UICollectionView!
+    @IBOutlet weak private var nowPlayingMoviesHorisontalColectionView: UICollectionView!
+    @IBOutlet weak private var topRatedMoviesHorisontalColectionView: UICollectionView!
     
     private var networkManager: NetworkManagerProtocol!
     private var movieManager: MoviesDataManager!
@@ -29,12 +29,9 @@ class HomeTabViewController: UIViewController {
     fileprivate var cellIndexPathRow = 0
     
     
-    let collectionViewAIdentifier = "MoviesCollectionViewCell"
-    let collectionViewBIdentifier = "CollectionViewBCell"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         // Popular movies
@@ -108,7 +105,7 @@ class HomeTabViewController: UIViewController {
         performSegue(withIdentifier: "InfinityMoviesByCategoryViewController", sender: nil)
         
     }
-
+    
 }
 
 
@@ -122,14 +119,6 @@ extension HomeTabViewController: UICollectionViewDataSource {
         case self.topRatedMoviesHorisontalColectionView: return TopRatedMovies.count
         default: return 0
         }
-        
-        
-//        if collectionView == self.popularMoviesHorisontalColectionView {
-//            return PopularMovies.count
-//            }
-//        if collectionView == self.newMoviesHorisontalColectionView {
-//            return NewMovies.count
-//            }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -142,22 +131,6 @@ extension HomeTabViewController: UICollectionViewDataSource {
         case self.topRatedMoviesHorisontalColectionView:  cell.configure(with: TopRatedMovies[indexPath.row])
         default:  print("No collectionView")
         }
-        
-        
-        
-        
-//        if (indexPath.row == movies.count-1 && 500 > indexPath.row){
-//            movieManager.getMovies(page: page ) { movies in
-//                self.movies.append(contentsOf:movies.results ?? [])
-//                // print(movies)
-//
-//                DispatchQueue.main.async {
-//                    self.popularMoviesHorisontalColectionView.reloadData()
-//                }
-//                self.page+=1
-//            }
-//        }
-        
         return cell
     }
 }
@@ -167,22 +140,15 @@ extension HomeTabViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = UIScreen.main.bounds.width
-        //print("ikakooo \(width)")
         return CGSize(
             width: width - 16 - 16,
             height:  45
         )
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
-    
-   
-//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-//        cellIndexPathRow = indexPath.row
-//        performSegue(withIdentifier: "MovieFullScreenViewController", sender: nil)
-//    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
@@ -195,8 +161,8 @@ extension HomeTabViewController: UICollectionViewDelegateFlowLayout {
             SelectedMovie = nil
         }
         performSegue(withIdentifier: "MovieFullScreenViewController", sender: nil)
-
-        }
+        
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let viewControler =   segue.destination as? MovieFullScreenViewController

@@ -27,7 +27,7 @@ class ShadowView: UIView {
             self.updateView()
         }
     }
-
+    
     //Apply params
     func updateView() {
         self.layer.shadowColor = self.shadowColor.cgColor

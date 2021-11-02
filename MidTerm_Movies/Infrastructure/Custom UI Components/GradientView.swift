@@ -12,7 +12,7 @@ import UIKit
 final class GradientView: UIView {
     @IBInspectable var startColor: UIColor = UIColor.clear
     @IBInspectable var endColor: UIColor = UIColor.clear
-
+    
     override func draw(_ rect: CGRect) {
         let gradient: CAGradientLayer = CAGradientLayer()
         gradient.frame = CGRect(x: CGFloat(0),
@@ -28,7 +28,7 @@ final class GradientView: UIView {
 final class GradientViewForFulScreenView: UIView {
     @IBInspectable var startColor: UIColor = UIColor.clear
     @IBInspectable var endColor: UIColor = UIColor.clear
-
+    
     override func draw(_ rect: CGRect) {
         let gradient: CAGradientLayer = CAGradientLayer()
         gradient.frame = CGRect(x: CGFloat(0),
@@ -48,7 +48,7 @@ final class GradientViewUIButton: UIButton {
     @IBInspectable var cornerRadius: CGFloat = 0
     @IBInspectable var borderWidth: CGFloat = 0
     @IBInspectable var borderColor: UIColor = UIColor.clear
-
+    
     override func draw(_ rect: CGRect) {
         let gradient: CAGradientLayer = CAGradientLayer()
         gradient.frame = CGRect(x: CGFloat(0),
@@ -60,7 +60,7 @@ final class GradientViewUIButton: UIButton {
         gradient.cornerRadius = cornerRadius
         gradient.borderWidth = borderWidth
         gradient.borderColor = borderColor.cgColor
-       
+        
         layer.addSublayer(gradient)
     }
 }
@@ -71,14 +71,14 @@ final class ShadowForUITextField: UITextField {
     @IBInspectable var shadowCornerRadius: CGFloat = 2.0
     @IBInspectable var shadowColor: UIColor = UIColor.black
     @IBInspectable var shadowOpacity: Float = 0.35
-
+    
     override func draw(_ rect: CGRect) {
         layer.masksToBounds = false
         layer.shadowOffset = shadowoffset
         layer.shadowColor = shadowColor.cgColor
         layer.shadowRadius = shadowCornerRadius
         layer.shadowOpacity = shadowOpacity
-
+        
         let backgroundCGColor = backgroundColor?.cgColor
         backgroundColor = nil
         layer.backgroundColor =  backgroundCGColor
